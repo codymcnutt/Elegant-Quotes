@@ -1,0 +1,59 @@
+.background{
+	background-color: LightSteelblue;
+	animation-name: fade;
+	animation-duration: 4s;
+}
+
+	@font-face {
+    font-family: Bilbo;
+    src: url('Bilbo.otf');
+}
+
+.headerText{
+	font-family: Bilbo;
+	color: Lightgoldenrodyellow; font-size: 90px;
+animation-name: fadeInUp;
+	animation-duration: 6s;
+	text-align: center
+}
+.inputs{
+	background-color: LightSkyblue;
+	border-style: dashed;
+	border-radius: 30px;
+	height:10%;
+	text-align: center;
+	height: 30px;
+	width: 100%;
+animation-name:bounceIn;
+animation-duration:3s;
+margin:10px;
+
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+.rating { 
+height:30px;
+width: 30px;
+display:inline-block;
+}
+
+.ravens {
+	background-color: black;
+}
+
+.faded {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 2s, opacity 2s;
+    .popup {
+    /*transition: all 2s;*/
+    position: fixed;
+    height: 50px;
+    background-color: pink;
+    top: 50vh;
+    left: 50vw;
+    transition: opacity 2s;
+}
