@@ -3,17 +3,41 @@
 <head>
   <link rel="stylesheet" href="animate.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="angular-rateit/dist/rateit.css" />
+<script src="angular-rateit/dist/rateit.js"></script>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<script src="main.js"type="text/javascript"></script>
+	<link href="ng-rating.css" rel="styletheet" type="text/css" />
+<!-- optional font-awesome to have access to icons -->
+<link href="font-awesome.css" rel="styletheet" type="text/css" />
+
+<script src="angular.js"></script>
+<script src="ng-rating.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<title></title>
+
+
+<link href="ng-rating.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script src="ng-rating.js"></script>
+
+
+
+	<title> Elegant Quotes</title>
 </head>
+<!-- ------------------------ ---------------------- This is where most of the animations and graphics for the animations live gif is the background with opacity set to 30% to make it more visible  --------------------------------------------------------- -->
 <body class = "dark" ng-controller = "newQuote">
-	 <div ng-show="raven" > <img class="fog1" src="images/fog.gif">
+	 <div  ng-show="raven"> <img class="fog1" src="images/fog.gif">
 	 </div>
- 	<div ng-show="raven" > <img class="fog1" src="images/rain.gif">
+ 	<div  ng-show="raven"> <img class="fog1" src="images/rain.gif">
  	</div>
  	<div  ng-show="raven"> <img  class="fog1" src="images/fog2.gif">
+ 	</div>
+ 	<div> <img  class="fog1" src="images/snow.gif">
  	</div>
  	<div  ng-show="raven"> <img  class= "splat1"src="images/grunge1.png">
  	</div>
@@ -34,17 +58,25 @@
 <div  class="container">
 		<div > <p class="headerText">  Elegant Quotes Go Here </p>
 	</div>
+	<!-- ------------------------ ---------------------- This ngKeyUp checks for the pressing of the enter key which is mapped on the keyboard as 13. We found this using the (this.which) console.log feature in JS.   --------------------------------------------------------- -->
 	<div  ng-keyup="isEnter($event)">
 		<div>   <input ng-model= "text" class = "inputs" type="text" placeholder ="Enter Quote Here" > 
 	 
 	  		<div  >  <input ng-model="author" class = "inputs" type="text" placeholder = "Enter Author Here" >
 	  		</div>
 	  	</div>
-	  		<div ng-repeat = "quote in quotes"> <p> {{quote.text}}</p> <p>{{quote.author}}</p> 
-	  			<div class="rating" ng-repeat = "rating in ratings"> <img  class="rating" src="images/raven.png">
+	  		<div ng-repeat = "quote in quotes | orderBy:'-rating'" > <p class= "ratingText"> {{quote.text}}</p> <p class= "ratingText">{{quote.author}}</p> 
+	  	
+	  			<div class="rating" > 
 	  			</div>
 
-	  	
+				<ng-rating ng-model="quote.rating"  editable=true show-grade=false>
+					
+				</ng-rating>
+	
+
+	  			</div>
+	  		<!-- ------------------------ ---------------------- This is the ng-class for raven where the faded state is set to true and the expression of anything with this ng-show is set to false.   --------------------------------------------------------- -->
 	  		</div>
 		<div ng-show="raven" ng-class="{'faded' : !raven}"> 
 		<!-- <div> <img class="fog1" src="images/fog.gif">

@@ -58,6 +58,7 @@ display: inherit;
 	position:absolute;
 	width:100%;
 	animation-delay:20s;
+	z-index: 2;
 }
 
 .noter{
@@ -78,6 +79,7 @@ animation-duration: 30s;
 display: inherit;
      left: 830px;
     top: -40px;
+    z-index: 3;
 }
 .ravenText{
 	position:absolute;
@@ -85,16 +87,16 @@ font-size: 120px;
 color: crimson;
 font-family: Bilbo;
 margin: 0 auto;
-    top: 220px;
-    left: 280px;
+    top: 260px;
+    left: 240px;
    
 text-shadow: 2px 2px black;
 animation-name: slideInUp;
 animation-duration: 10s;
-animation-delay:60s;
+animation-delay:45s;
 opacity:0;
-animation-fill-mode:forard;
-
+ animation-fill-mode: forwards;
+z-index: 4
 }
 
 .headerText{
@@ -129,6 +131,7 @@ animation-name:bounceIn;
 animation-duration:3s;
 margin-left: 10%;
 margin-top: 5%;
+margin-bottom:5%;
 
 
 }
@@ -137,10 +140,15 @@ margin-top: 5%;
    color: black;
 }
 
-.rating { 
-height:30px;
-width: 30px;
+.rating {
+	padding:2px;
 display:inline-block;
+}
+.ratingText{
+		font-family: Bilbo;
+	color: Lightgoldenrodyellow;
+	font-size: 40px;
+	text-shadow: 2px 1px black;
 }
 
 .ravens {
@@ -160,3 +168,6 @@ display:inline-block;
     left: 50vw;
     transition: opacity 2s;
 }
+
+
+
