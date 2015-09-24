@@ -8,26 +8,55 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<title></title>
 </head>
-<body class= "background" >
-	<div > <p class="headerText">  Elegant Quotes Go Here </p>
-</div>
-<div ng-controller = "newQuote" ng-keyup="isEnter($event)">
-	<div>   <input ng-model= "text" class = "inputs" type="text" placeholder ="Enter Quote Here" > 
- 
-  		<div  >  <input ng-model="author" class = "inputs" type="text" placeholder = "Enter Author Here" >
-  		</div>
-  	</div>
-  		<div ng-repeat = "quote in quotes"> <p> {{quote.text}}</p> <p>{{quote.author}}</p> 
-  			<div class="rating" ng-repeat = "rating in ratings"> <img  class="rating" src="images/raven.png">
-  			</div>
+<body class = "dark" ng-controller = "newQuote">
+	 <div ng-show="raven" > <img class="fog1" src="images/fog.gif">
+	 </div>
+ 	<div ng-show="raven" > <img class="fog1" src="images/rain.gif">
+ 	</div>
+ 	<div  ng-show="raven"> <img  class="fog1" src="images/fog2.gif">
+ 	</div>
+ 	<div  ng-show="raven"> <img  class= "splat1"src="images/grunge1.png">
+ 	</div>
+ 		<div  ng-show="raven"> <img  class="splat3" src="images/grunge3.png">
+ 	</div> 
+ 		<div  ng-show="raven"> <img  class = "splat2" src="images/grunge2.png">
+	</div> 
+		<div  ng-show="raven"> <img  class = "splat2" src="images/grunge4.png">
+	</div> 
+		
+		<div ng-show="raven" class= "noteContainer"> 
+			<div  ><img class= "noter" src="images/note.png" > </div>
+			<div > <p class="ravenText">Nevermore <br> Quoth the Raven!!! <br> - Edgar Allan Poe </p> </div>
+		
+	</div>
+	<div ng-show="raven"> <img class="ravenPop" src="images/raven.png">
+		</div>
+<div  class="container">
+		<div > <p class="headerText">  Elegant Quotes Go Here </p>
+	</div>
+	<div  ng-keyup="isEnter($event)">
+		<div>   <input ng-model= "text" class = "inputs" type="text" placeholder ="Enter Quote Here" > 
+	 
+	  		<div  >  <input ng-model="author" class = "inputs" type="text" placeholder = "Enter Author Here" >
+	  		</div>
+	  	</div>
+	  		<div ng-repeat = "quote in quotes"> <p> {{quote.text}}</p> <p>{{quote.author}}</p> 
+	  			<div class="rating" ng-repeat = "rating in ratings"> <img  class="rating" src="images/raven.png">
+	  			</div>
 
-  	
-  		</div>
-	<div ng-show="raven" ng-class="{faded : !dismissRaven}" class="ravens"> <p > This is a test </p>
-	</div>
-	</div>
-  <!-- 	<div ng-repeat = "quote in quotes"> <p> {{quote.author}} </p> -->
-	</div>
+	  	
+	  		</div>
+		<div ng-show="raven" ng-class="{'faded' : !raven}"> 
+		<!-- <div> <img class="fog1" src="images/fog.gif">
+ </div>
+ <div> <img class="fog1" src="images/fog2.gif">
+ </div> -->
+		</div>
+		</div>
+	  <!-- 	<div ng-repeat = "quote in quotes"> <p> {{quote.author}} </p> -->
+		</div>
+
 </div>
+
 </body>
 </html>

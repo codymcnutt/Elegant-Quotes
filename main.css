@@ -1,12 +1,100 @@
-.background{
-	background-color: LightSteelblue;
-	animation-name: fade;
-	animation-duration: 4s;
+.fog1{
+	  background-repeat: no-repeat;
+	opacity:.3;
+position: absolute;
+height: 100%;
+width: 100%;
+z-index: -1;
+animation-name: fadeIn;
+animation-duration: 20s;
 }
 
+.splat1{
+	position: fixed;
+height: 100;
+width: 70;
+animation-name: fadeIn;
+animation-duration: 10s;
+display: inherit;
+    top: -60px;
+    left: -60px;
+}
+.splat2{
+	position: fixed;
+height: 100;
+width: 70;
+animation-name: fadeIn;
+animation-duration: 30s;
+display: inherit;
+      left: 290px;
+    top: -290px;
+}
+
+.splat3{
+	position: fixed;
+height: 100;
+width: 70;
+animation-name: fadeIn;
+animation-duration: 40s;
+display: inherit;
+     left: 690px;
+    top: -190px;
+}
+.splat4{
+	position: fixed;
+height: 100;
+width: 70;
+animation-name: fadeIn;
+animation-duration: 40s;
+display: inherit;
+     left: 690px;
+    top: -190px;
+}
 	@font-face {
     font-family: Bilbo;
     src: url('Bilbo.otf');
+}
+.noteContainer{
+	position:absolute;
+	width:100%;
+	animation-delay:20s;
+}
+
+.noter{
+	position:fixed;
+display: inherit;
+top: 20px;
+left: -80px;
+animation-name: rotateInDownRight;
+animation-duration: 50s;
+
+}
+.ravenPop{
+		position: absolute;
+height: 100;
+width: 70;
+animation-name: fadeInUp;
+animation-duration: 30s;
+display: inherit;
+     left: 830px;
+    top: -40px;
+}
+.ravenText{
+	position:absolute;
+font-size: 120px;
+color: crimson;
+font-family: Bilbo;
+margin: 0 auto;
+    top: 220px;
+    left: 280px;
+   
+text-shadow: 2px 2px black;
+animation-name: slideInUp;
+animation-duration: 10s;
+animation-delay:60s;
+opacity:0;
+animation-fill-mode:forard;
+
 }
 
 .headerText{
@@ -14,19 +102,34 @@
 	color: Lightgoldenrodyellow; font-size: 90px;
 animation-name: fadeInUp;
 	animation-duration: 6s;
-	text-align: center
+	text-align: center;
+	 margin: 0 auto;
+	 padding-top:20%;
+}
+.container{
+	  max-width: 800px;
+  margin: 0 auto;
+  height: 80vh;
+
+}
+.dark{
+ 	background-size: 100%;
+	background-color: darkgray;
 }
 .inputs{
 	background-color: LightSkyblue;
-	border-style: dashed;
+	border: 2px dashed #ffffff;
+	box-shadow: 0 0 0 8px lightSkyblue;
 	border-radius: 30px;
 	height:10%;
 	text-align: center;
 	height: 30px;
-	width: 100%;
+	width: 80%;
 animation-name:bounceIn;
 animation-duration:3s;
-margin:10px;
+margin-left: 10%;
+margin-top: 5%;
+
 
 }
 
@@ -49,7 +152,7 @@ display:inline-block;
     opacity: 0;
     transition: visibility 0s linear 2s, opacity 2s;
     .popup {
-    /*transition: all 2s;*/
+    transition: all 2s;
     position: fixed;
     height: 50px;
     background-color: pink;
