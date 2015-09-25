@@ -27,7 +27,8 @@ angular.module('myApp').controller('newQuote', function ($scope) {
 
 }
     	console.log($scope.quotes)
-    	
+  
+    $scope.sort =   	
   })
 
 
