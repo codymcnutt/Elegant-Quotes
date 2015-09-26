@@ -25,7 +25,7 @@
             scope.basedOn = 5;
           }
           if (scope.iconClass == null) {
-            scope.iconClass = 'fa fa-beer fa-2x';
+            scope.iconClass = 'fa fa-coffee fa-2x';
           }
           scope.stars = [];
           scope.tmpValue = null;

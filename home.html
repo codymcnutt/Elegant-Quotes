@@ -29,13 +29,13 @@
 
 	<title> Elegant Quotes</title>
 </head>
-<!-- ------------------------ ---------------------- This is where most of the animations and graphics for the animations live gif is the background with opacity set to 30% to make it more visible  --------------------------------------------------------- -->
+<!--   This is where most of the animations and graphics for the animations live gif is the background with opacity set to 30% to make it more visible   -->
 <body class = "dark" ng-controller = "newQuote">
 	 <div  ng-show="raven"> <img class="fog1" src="images/fog.gif">
 	 </div>
  	<div  ng-show="raven"> <img class="fog1" src="images/rain.gif">
  	</div>
- 	<div  ng-show="raven"> <img  class="fog1" src="images/fog2.gif">
+ 	<!-- <div  ng-show="raven"> <img  class="fog1" src="images/fog2.gif"> -->
  	</div>
  	<div> <img  class="fog1" src="images/snow.gif">
  	</div>
@@ -58,7 +58,7 @@
 <div  class="container">
 		<div > <p class="headerText">  Elegant Quotes Go Here </p>
 	</div>
-	<!-- ------------------------ ---------------------- This ngKeyUp checks for the pressing of the enter key which is mapped on the keyboard as 13. We found this using the (this.which) console.log feature in JS.   --------------------------------------------------------- -->
+	  <!-- This ngKeyUp checks for the pressing of the enter key which is mapped on the keyboard as 13. We found this using the (this.which) console.log feature in JS.    -->
 	<div  ng-keyup="isEnter($event)">
 		<div>   <input ng-model= "text" class = "inputs" type="text" placeholder ="Enter Quote Here" > 
 	 
@@ -66,9 +66,7 @@
 	  		</div>
 	  	</div>
 	  		<div ng-repeat = "quote in quotes | orderBy:'-rating'" > <p class= "ratingText"> {{quote.text}}</p> <p class= "ratingText">{{quote.author}}</p> 
-	  	
-	  			<div class="rating" > 
-	  			</div>
+	  	<!-- orderby sorts the ratings  -->
 
 				<ng-rating ng-model="quote.rating"  editable=true show-grade=false>
 					
@@ -76,9 +74,9 @@
 	
 
 	  			</div>
-	  		<!-- ------------------------ ---------------------- This is the ng-class for raven where the faded state is set to true and the expression of anything with this ng-show is set to false.   --------------------------------------------------------- -->
-	  		</div>
-		<div ng-show="raven" ng-class="{'faded' : !raven}"> 
+	  		 <!-- This is the ng-class for raven where the faded state is set to true and the expression of anything with this ng-show is set to false.    -->
+	<!--   		</div>
+		<div ng-show="raven" ng-class="{'faded' : !raven}">  -->
 		<!-- <div> <img class="fog1" src="images/fog.gif">
  </div>
  <div> <img class="fog1" src="images/fog2.gif">
@@ -91,4 +89,4 @@
 </div>
 
 </body>
-</html>
+</html> -->
